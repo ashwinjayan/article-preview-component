@@ -128,7 +128,7 @@ body {
     height: 2.5em;
     flex-basis: auto;
     background-color: $light-gray;
-    color: $medium-gray;
+    color: $dark-gray;
     border-radius: 50%;
     border: none;
     outline: none;
@@ -163,8 +163,8 @@ footer {
 }
 
 .share-content {
-    width: 70%;
-    padding-right: 50px;
+    width: 60%;
+    padding-right: 60px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
