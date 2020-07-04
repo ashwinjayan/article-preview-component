@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+//Variables
+
+$font: 'Manrope', sans-serif;
+
+$black: hsl(217, 19%, 35%);
+$dark-gray: hsl(214, 17%, 51%);
+$medium-gray: hsl(212, 23%, 69%);
+$light-gray: hsl(210, 46%, 95%);
+
+body {
+    margin: 0;
+    font-family: $font;
+    background-color: $light-gray;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.container {
+    min-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    max-width: 18em;
+    border-radius: 20px;
+    margin: 1em 0;
+    box-shadow: 5px 0px 10px rgba($color: #000000, $alpha: 0.05),
+                -5px 0px 10px rgba($color: #000000, $alpha: 0.05),
+                0px -5px 10px rgba($color: #000000, $alpha: 0.05),
+                0px 5px 10px rgba($color: #000000, $alpha: 0.05);
+
+    @media only screen and (min-width: 800px) {
+        flex-direction: row;
+        height: 60%;
+        max-width: 45em;
+    }
+}
+
+.card-img {
+    flex: 1 1 20%;
+
+    img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        width: 100%;
+
+        @media only screen and (min-width: 800px) {
+            height: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 0;
+        }
+    }
+
+    @media only screen and (min-width: 800px) {
+        flex: 1 1 60%;
+    }
+}
+
+.card-content {
+    flex: 1 1 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & .title {
+        font-weight: 700;
+        color: $black;
+        font-size: 0.9em;
+        padding: 0 2em;
+    }
+
+    & .subtitle {
+        font-weight: 300;
+        color: $dark-gray;
+        font-size: 0.8em;
+        padding: 0 2em;
+    }
+}
+
+.author-details {
+    display: flex;
+    max-height: 50px;
+    padding: 0.8em 2em 1.2em 2em;
+    position: relative;
+    align-items: center;  
+}
+
+.author-name {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: $dark-gray;
+
+    span {
+        font-weight: 500;
+        color: $medium-gray;
+    }
+
+    @media only screen and (min-width: 800px) {
+        flex: 1 1 68%;
+    }
+}
+
+.author-img {
+    flex: 1 1 15%;
+
+    img {
+        border-radius: 50%;
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
+
+.share-btn {
+    width: 2.5em;
+    height: 2.5em;
+    flex-basis: auto;
+    background-color: $light-gray;
+    color: $medium-gray;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+
+.invert {
+    background-color: $medium-gray;
+    color: $light-gray;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 10%;
+    color: $light-gray;
+    background-color: rgba($color: #2f6857, $alpha: 1.0);
+
+    a {
+        color: $light-gray;
+    }
+
+    a:hover {
+        color: $dark-gray;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.share-content {
+    width: 70%;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    span {
+        font-size: 0.9em;
+    }
+}
+
+.share-overlay {
+    display: flex;
+    text-transform: uppercase;
+    background-color: $black;
+    color: $medium-gray;
+    justify-content: space-evenly;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        li + li {
+            margin-left: 20px;
+        }
+
+        a {
+            color: $light-gray;
+
+            &:hover {
+                color: $medium-gray;
+            }
+        }
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    translate: 0.3s all ease-in-out;
+
+    button {
+        width: 2.5em;
+        height: 2.5em;
+        background-color: $medium-gray;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .share-overlay {
+        height: 2.5em;
+        width: 18em;
+        padding: 5px 0;
+        border-radius: 10px;
+
+        position: absolute;
+        top: -60%;
+        left: 36.5%;
+
+        .share-content {
+            width: 100%;
+            padding: 0;
+        }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+            left: 66%;
+            border-width: 8px;
+            border-style: solid;
+            border-color: $black transparent transparent transparent;
+        }
+    }
+}

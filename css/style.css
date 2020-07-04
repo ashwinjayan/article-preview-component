@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  background-color: #ecf2f8;
+  max-width: 100%;
+  height: 100vh;
+}
+
+.container {
+  min-height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  max-width: 18em;
+  border-radius: 20px;
+  margin: 1em 0;
+  -webkit-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.05), -5px 0px 10px rgba(0, 0, 0, 0.05), 0px -5px 10px rgba(0, 0, 0, 0.05), 0px 5px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.05), -5px 0px 10px rgba(0, 0, 0, 0.05), 0px -5px 10px rgba(0, 0, 0, 0.05), 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media only screen and (min-width: 800px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 60%;
+    max-width: 45em;
+  }
+}
+
+.card-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+}
+
+.card-img img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .card-img img {
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .card-img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 60%;
+            flex: 1 1 60%;
+  }
+}
+
+.card-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 70%;
+          flex: 1 1 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-content .title {
+  font-weight: 700;
+  color: #48556a;
+  font-size: 0.9em;
+  padding: 0 2em;
+}
+
+.card-content .subtitle {
+  font-weight: 300;
+  color: #6d7f97;
+  font-size: 0.8em;
+  padding: 0 2em;
+}
+
+.author-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 50px;
+  padding: 0.8em 2em 1.2em 2em;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.author-name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #6d7f97;
+}
+
+.author-name span {
+  font-weight: 500;
+  color: #9eafc2;
+}
+
+@media only screen and (min-width: 800px) {
+  .author-name {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 68%;
+            flex: 1 1 68%;
+  }
+}
+
+.author-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 15%;
+          flex: 1 1 15%;
+}
+
+.author-img img {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.share-btn {
+  width: 2.5em;
+  height: 2.5em;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  background-color: #ecf2f8;
+  color: #9eafc2;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+
+.invert {
+  background-color: #9eafc2;
+  color: #ecf2f8;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  height: 10%;
+  color: #ecf2f8;
+  background-color: #2f6857;
+}
+
+footer a {
+  color: #ecf2f8;
+}
+
+footer a:hover {
+  color: #6d7f97;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.share-content {
+  width: 70%;
+  padding-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.1em;
+}
+
+.share-content span {
+  font-size: 0.9em;
+}
+
+.share-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  background-color: #48556a;
+  color: #9eafc2;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  translate: 0.3s all ease-in-out;
+}
+
+.share-overlay ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.share-overlay ul li + li {
+  margin-left: 20px;
+}
+
+.share-overlay ul a {
+  color: #ecf2f8;
+}
+
+.share-overlay ul a:hover {
+  color: #9eafc2;
+}
+
+.share-overlay button {
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #9eafc2;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .share-overlay {
+    height: 2.5em;
+    width: 18em;
+    padding: 5px 0;
+    border-radius: 10px;
+    position: absolute;
+    top: -60%;
+    left: 36.5%;
+  }
+  .share-overlay .share-content {
+    width: 100%;
+    padding: 0;
+  }
+  .share-overlay::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 66%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #48556a transparent transparent transparent;
+  }
+}
+/*# sourceMappingURL=style.css.map */
