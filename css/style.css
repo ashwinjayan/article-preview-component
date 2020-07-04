@@ -272,6 +272,7 @@ footer a:hover {
 
 .share-overlay ul a {
   color: #ecf2f8;
+  content: " ";
 }
 
 .share-overlay ul a:hover {
